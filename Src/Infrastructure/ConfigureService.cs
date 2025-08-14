@@ -1,4 +1,6 @@
-﻿using Infrastructure.Persistence;
+﻿using Application.Contracts;
+using Infrastructure.Context;
+using Infrastructure.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -18,7 +20,7 @@ public static class ConfigureService
         {
             option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         });
-        
+        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
         return services;
     }
 }
