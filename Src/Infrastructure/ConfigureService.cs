@@ -20,7 +20,8 @@ public static class ConfigureService
         {
             option.UseSqlServer(configuration.GetConnectionString("DefaultConnection"));
         });
-        services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        //  services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+        services.AddScoped<IUnitOfWork,UnitOfWork>();
         return services;
     }
 }

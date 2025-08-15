@@ -13,8 +13,13 @@
   <ItemGroup>
     <Folder Include="DTO\" />
     <Folder Include="Common\" />
-    <Folder Include="Fearures\" />
+    <Folder Include="Fearures\Product\Commands\" />
     <Folder Include="Interfaces\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="13.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.18" />
   </ItemGroup>
 
 </Project>

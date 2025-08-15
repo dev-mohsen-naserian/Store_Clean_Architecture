@@ -7,5 +7,8 @@ using Web.Common;
 namespace Web.Controllers;
 public class ProductController : BaseApiController
 {
-    private readonly IGenericRepository<Product> repository;
+    public async Task<IActionResult>Get()
+    {
+        return Ok();
+    }
 }
